@@ -45,7 +45,9 @@ impl System {
     
     /// Returns whether the system is at all satisfiable,
     pub fn is_satisfiable(&self, eps: R) -> bool {
-        if let Ok(pinv) = self.constraints.clone().pseudo_inverse(eps) {
+        if self.constants.nrows() == 0 {
+            true
+        } else if let Ok(pinv) = self.constraints.clone().pseudo_inverse(eps) {
             relative_eq!(
                 self.constraints.clone() * pinv * self.constants.clone(),
                 self.constants,
