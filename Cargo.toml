@@ -5,12 +5,11 @@ authors = ["Grayson Burton <ocornoc@protonmail.com>"]
 edition = "2018"
 license = "Apache-2.0"
 description = """
-An extremely basic linear system satisfiability checker
+A satisfiability checker for universe polymorphism in Qualm.
 
-It is not made for general use.
+Based on "SMT Solving for the Theory of Ordering Constraints" by
+Cunjing Ge, Feifei Ma, Jeff Huang, and Jian Zhang.
 """
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 nalgebra = "^0.21"
